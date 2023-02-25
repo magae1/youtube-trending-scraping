@@ -7,13 +7,13 @@
 How to build docker
 ===============
 
-    > docker build . -t [image-name]
+    docker build . -t [image-name]
 
 Example
 ===============
 **- request**
 
-    > curl -v "http://localhost:9080/crawl.json?spider_name=youtube&start_requests=true"
+    curl -v "http://localhost:9080/crawl.json?spider_name=youtube&start_requests=true"
 
 **- response**
 
