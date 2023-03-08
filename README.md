@@ -98,6 +98,7 @@
       }
 
 ## 2. aws lambda 버전
+ - https://blog.vikfand.com/posts/scrapy-fargate-sls-guide/
 ### How to build
     > docker build -t [image-name] -file lambda.Dockerfile .
 
