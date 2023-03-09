@@ -1,7 +1,6 @@
 import scrapy
 from ..items import VideoItem
 from bs4 import BeautifulSoup
-import logging
 
 
 def get_num(string):

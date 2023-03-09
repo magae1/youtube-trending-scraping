@@ -3,16 +3,13 @@
 
 * This project is for practice of scrapy-playwright.
 * Browser for scraping runs on 'ko-kr'(KOREAN.ver)
-* Add extra dockerfile for aws lambda container 
 
-
-## 1. scrapyd 버전(Standalone)
-### How to build docker
+## How to build docker
 
 
     > docker build . -t [image-name]
 
-### Example(with. scrapyd)
+## Usage Example(with. scrapyd)
 
 **- request**
 
@@ -96,20 +93,3 @@
               }, 
           "spider_name": "youtube"
       }
-
-## 2. aws lambda 버전
- - https://blog.vikfand.com/posts/scrapy-fargate-sls-guide/
-### How to build
-    > docker build -t [image-name] -file lambda.Dockerfile .
-
-### How to test
-    > mkdir -p ~/.aws-lambda-rie && \
-    curl -Lo ~/.aws-lambda-rie/aws-lambda-rie https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie && \
-    chmod +x ~/.aws-lambda-rie/aws-lambda-rie
-======
-
-    > docker run -d -v ~/.aws-lambda-rie:/aws-lambda -p 9000:8080 \
-    --entrypoint /aws-lambda/aws-lambda-rie \
-    [image-name]:[image-tag] \
-        /usr/local/bin/python -m awslambdaric app.handler
-
